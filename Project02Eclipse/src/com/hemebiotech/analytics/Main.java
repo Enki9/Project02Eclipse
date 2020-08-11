@@ -14,7 +14,7 @@ public class Main {
 		AnalyticsCounter counter = new AnalyticsCounter();
 		Map<String, Integer> organizedListSymptoms = counter.count(listSymptoms);
 		
-		ISymptomWriter write = new WriteSymptomDataInFile();
+		ISymptomWriter write = new WriteSymptomDataInFile("result.out");
 		write.WriteSymptom(organizedListSymptoms);
 	}
 
