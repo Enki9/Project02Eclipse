@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- * Simple brute force implementation
+ * The dictionary is copied to a file
  *
  */
 
