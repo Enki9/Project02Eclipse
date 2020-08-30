@@ -10,6 +10,6 @@ import java.util.Map;
 
 public interface ISymptomWriter {
 	
-	void WriteSymptom(Map<String, Integer> organizedListSymptoms) throws IOException;
+	void writeSymptom(Map<String, Integer> organizedListSymptoms) throws IOException;
 
 }

@@ -23,7 +23,7 @@ public class WriteSymptomDataInFile implements ISymptomWriter {
 	}
 
 	@Override
-	public void WriteSymptom(Map<String, Integer> organizedListSymptoms) throws IOException {
+	public void writeSymptom(Map<String, Integer> organizedListSymptoms) throws IOException {
 		
 		FileWriter writer = new FileWriter (filepath);
 		
