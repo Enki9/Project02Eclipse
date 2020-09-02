@@ -24,12 +24,20 @@ public class WriteSymptomDataInFile implements ISymptomWriter {
 
 	@Override
 	public void writeSymptom(Map<String, Integer> organizedListSymptoms) throws IOException {
+		FileWriter writer = null;
 		
-		FileWriter writer = new FileWriter (filepath);
-		
-		for(String s : organizedListSymptoms.keySet()) 
-			writer.write(s + ": " + organizedListSymptoms.get(s) + "\n");
-		writer.close();
-		
+		if(filepath!=null) {
+			try {
+				writer = new FileWriter (filepath);
+				for(String s : organizedListSymptoms.keySet()) 
+					writer.write(s + ": " + organizedListSymptoms.get(s) + "\n");
+			} 
+			catch (IOException e) {
+				e.printStackTrace();
+			}
+			finally {
+				writer.close();
+			}
+		}		
 	}
 }

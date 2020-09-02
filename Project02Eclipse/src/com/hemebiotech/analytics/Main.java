@@ -9,13 +9,13 @@ public class Main {
 	public static void main(String args[]) throws Exception {
 
 		ISymptomReader read = new ReadSymptomDataFromFile("symptoms.txt");
-		List<String> listSymptoms = read.GetSymptoms();
+		List<String> listSymptoms = read.getSymptoms();
 			
 		AnalyticsCounter counter = new AnalyticsCounter();
 		Map<String, Integer> organizedListSymptoms = counter.count(listSymptoms);
 		
 		ISymptomWriter write = new WriteSymptomDataInFile("result.out");
-		write.WriteSymptom(organizedListSymptoms);
+		write.writeSymptom(organizedListSymptoms);
 	}
 
 }
